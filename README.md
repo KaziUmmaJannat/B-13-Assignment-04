@@ -1,83 +1,42 @@
-## Welcome To ( সহজ সরল সিম্পল ) Assignment - 4 
+Question-1
 
+getElementById-> gets one element by its ID. getElementsByClassName-> gets all elements with that class.
+querySelector-> gets first element that matches a CSS selector. 
+querySelectorAll-> gets all elements that match a CSS selector.
 
----
-# 📅 Deadline For 60 marks: 23th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 50 marks: 24th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 30 marks: Any time after 24th February.
+Question-2
 
+1.Create element
+const newDiv = document.createElement('div');
 
-# Main Requirements
+2.Add content or class
+newDiv.innerText = "Hello World!"; newDiv.className = "my-div";
 
-## Design Part
+3.Insert into the page
+document.body.appendChild(newDiv); document.body.prepend(newDiv);
 
-## Dashboard
-- Website name and Create a dashboard like figma 
-- The section should be responsive for mobile devices. It is totally up to you. 
+Question-3
 
-## Available Jobs Section
-- A title on the left side, jobs count on the right side 
-- 3 different tab  below the section title 
-- Minimum 8 cards with:
-	- companyName
-	- position
-	- location
-	- type
-	- salary
-	- description
-	- 2 buttons: Interview, Rejected
-- By default all the jobs data will show on All tab, and the Interview, Rejected tab will show “No jobs Available” message with a subtitle below and an icon/image on the above
+Event Bubbling means an event on a child element goes up to its parent elements automatically.
 
-- The section should be responsive for mobile devices. It is totally up to you.
+It Works:
+document.getElementById('button').addEventListener('click', function() { alert('Button clicked!'); });
 
---- 
+Question-4
 
-## Functionalities Part
-- Clicking on Interview button on the card 
-    - will add the data on Interview tab 
-    - add the status as Interview.
-    - Will increase the the count of interview in Dashboard 
+Event Delegation means putting an event listener on a parent element to handle events for its child elements.
 
-- Clicking on Rejected button on the card 
-    - will add the data on Rejected tab 
-    - add the status as Rejected.
-    - Will increase the the count of Rejected in Dashboard
+Example:
+const list = document.getElementById('list');
 
-- Enable toggle between Interview and rejected button(you can select Rejected button after clicking on Interview, and Interview button after clicking on Rejected button). It will change the tab and dashboard count also. It will show tab wise jobs count on the right.
+list.addEventListener('click', function(event) { if (event.target.tagName === 'LI') { alert('You clicked on ' + event.target.innerText); } });
 
----
+ Why Useful: saves memory and code because you don’t need a separate listener for each child.
 
-# Challenges Requirements
-- Clicking on the delete button will remove that card from the UI, and the count will be deducted from the dashboard card and the main section.
-- No lorem ipsum text on your website. At least 8 meaningful commits in your project.  
+Question-5
 
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
+preventDefault() --> Stops the default action
+Example: event.preventDefault() prevents a link from opening
 
-
-## Answers to Questions
-
-### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
-
-### 2. How do you create and insert a new element into the DOM?
-
-### 3. What is Event Bubbling? And how does it work?
-
-### 4. What is Event Delegation in JavaScript? Why is it useful?
-
-### 5. What is the difference between preventDefault() and stopPropagation() methods?
-
----
-
-
-**Technology Stack:**
-- HTML
-- CSS (Vanilla/Tailwind/DaisyUI)
-- JavaScript (Vanilla)
-
-
---- 
-
-## What to submit: 
-
-1. GitHub Repository Link: 
-2. Live Site Link: 
+stopPropagation() --> Stops the event from bubbling up to parent elements
+Example: event.stopPropagation() prevents the parents click event from running
