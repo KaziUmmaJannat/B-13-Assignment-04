@@ -1,4 +1,5 @@
 Question-1
+
 getElementById -> gets one element by its ID.
 getElementsByClassName -> gets all elements with that class.
 querySelector ->  gets first element that matches a CSS selector.
@@ -6,6 +7,7 @@ querySelectorAll -> gets all elements that match a CSS selector.
 
 
 Question-2
+
 1.Create element
 const newDiv = document.createElement('div');
 
@@ -19,6 +21,7 @@ document.body.prepend(newDiv);
 
 
 Question-3
+
 Event Bubbling means an event on a child element goes up to its parent elements automatically.
 
 Example:
@@ -29,6 +32,7 @@ document.getElementById('button').addEventListener('click', function() {
 
 
 Question-4
+
 Event Delegation means putting an event listener on a parent element to handle events for its child elements.
 
 Example:
@@ -45,6 +49,7 @@ Why useful: saves memory and code because you don’t need a separate listener f
 
 
 Question-5
+
 preventDefault() --> Stops the default action
 
 Example: event.preventDefault() prevents a link from opening
