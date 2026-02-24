@@ -53,5 +53,23 @@ document.addEventListener('click', function(event){
         InterViewHeadPara.innerText = interviewCards.length;
     }
     
-   
+    // Interview button click
+    if(target.classList.contains('Interview-btn')){
+        const InterviewCard = target.closest('.banner-card');
+        const CardContrain = InterviewCard.querySelector('.not-applied');
+        
+        CardContrain.innerHTML = `<p class="Interview-p-change btn text-base-200 bg-accent border border-accent">INTERVIEW</p>`;
+        
+        const noJobsDiv = interviewCardSection.querySelector('.interview-div');
+        noJobsDiv.classList.add('hidden');
+        
+        InterviewCard.classList.remove('hidden');
+        interviewCardSection.prepend(InterviewCard);
+        
+        const interviewCards = interviewCardSection.querySelectorAll('.banner-card');
+        InterViewHeadPara.innerText = interviewCards.length;
+        
+        const rejectedCards = rejectedCardSection.querySelectorAll('.banner-card');
+        RejectHeadPara.innerText = rejectedCards.length;
+    }
 })

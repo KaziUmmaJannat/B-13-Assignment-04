@@ -1,42 +1,59 @@
-Question-1
+Question-1 :
+getElementById -> gets one element by its ID.
+getElementsByClassName -> gets all elements with that class.
+querySelector ->  gets first element that matches a CSS selector.
+querySelectorAll -> gets all elements that match a CSS selector.
 
-getElementById-> gets one element by its ID. getElementsByClassName-> gets all elements with that class.
-querySelector-> gets first element that matches a CSS selector. 
-querySelectorAll-> gets all elements that match a CSS selector.
-
-Question-2
+Question-2 :
 
 1.Create element
+
 const newDiv = document.createElement('div');
 
 2.Add content or class
-newDiv.innerText = "Hello World!"; newDiv.className = "my-div";
+
+newDiv.innerText = "Hello World!";
+newDiv.className = "my-div";
 
 3.Insert into the page
-document.body.appendChild(newDiv); document.body.prepend(newDiv);
 
-Question-3
+document.body.appendChild(newDiv); 
+document.body.prepend(newDiv); 
+
+Question-3 :
 
 Event Bubbling means an event on a child element goes up to its parent elements automatically.
 
-It Works:
-document.getElementById('button').addEventListener('click', function() { alert('Button clicked!'); });
+Example:
 
-Question-4
+document.getElementById('button').addEventListener('click', function() {
+    alert('Button clicked!');
+});
+
+
+Question-4 :
 
 Event Delegation means putting an event listener on a parent element to handle events for its child elements.
 
 Example:
+
 const list = document.getElementById('list');
 
-list.addEventListener('click', function(event) { if (event.target.tagName === 'LI') { alert('You clicked on ' + event.target.innerText); } });
+list.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        alert('You clicked on ' + event.target.innerText);
+    }
+});
 
- Why Useful: saves memory and code because you don’t need a separate listener for each child.
+Why useful: saves memory and code because you don’t need a separate listener for each child.
 
-Question-5
+Question-5 :
 
 preventDefault() --> Stops the default action
+
 Example: event.preventDefault() prevents a link from opening
 
+
 stopPropagation() --> Stops the event from bubbling up to parent elements
+
 Example: event.stopPropagation() prevents the parents click event from running
