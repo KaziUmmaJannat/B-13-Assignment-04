@@ -1,3 +1,4 @@
+
 const BannerCardContainer = document.getElementById('banner-card-container')
 
 const total = document.getElementById('total-p')
